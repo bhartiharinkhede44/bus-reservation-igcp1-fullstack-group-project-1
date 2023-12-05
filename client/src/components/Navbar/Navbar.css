@@ -1,0 +1,98 @@
+.design-nav:hover {
+    color: gold;
+}
+.design-nav {
+    background-color: rgb(92, 68, 68);
+    padding: 30px 15px;
+    color: white; 
+    margin: 0px;
+}
+.text-reserve{
+    color: white;
+   position: relative;
+   top:18px;
+  
+}
+  .logout-btn{
+    margin: 15px;
+    padding: 15px;
+    color: rgb(245, 210, 15);
+}
+  .logout-btn:hover{
+    margin: 15px;
+    padding: 15px;
+    color:black;
+}
+.font {
+    font-size: 30px;
+    text-decoration: none;
+}
+.flex {
+    display: flex;
+    justify-content: space-evenly;    
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+.flex-direction{
+    display: flex;
+    justify-content: space-between; 
+    flex-direction: row;
+}
+body{
+    margin:0;
+    padding:0;
+}
+.container-text {
+    margin: 10px 35px;
+    text-decoration: none;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+}
+.user{
+    margin: 20px 35px;
+    text-decoration: none;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+}
+.user:hover {
+    margin: 30px 35px;
+    text-decoration: none;
+    color: gold;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.container-text:hover {
+    margin: 0px 35px;
+    text-decoration: none;
+    color: gold;
+    font-size: 27px;
+    cursor: pointer;
+}
+@media screen and (max-width:768px) {
+    .design {
+        display: flex;
+        flex-direction: column;
+        padding: 15px 5px;
+        flex-wrap: wrap;
+}
+    .flex-direction{
+        display: flex;
+        justify-content: start; 
+        flex-direction: column;
+}
+    .flex {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        flex-wrap: wrap;
+
+    }   
+    .font {
+        font-size: 25px;
+        text-decoration: none;
+}
+}

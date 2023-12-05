@@ -4,6 +4,9 @@ import './index.css';
 import Home from "./views/Home/Home"
 import Login from "./views/Login/Login"
 import Signup from "./views/Signup/Signup"
+import Contact from "./views/Contact/Contact"
+import Blog from './views/Blog/Blog';
+import Faq from "./views/Faq/Faq"
 import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 
 
@@ -22,6 +25,18 @@ const router = createBrowserRouter([
     {
       path: "/login",
       element: <Login/>,
+    },
+    {
+      path: "/blog",
+      element: <Blog/>,
+    },
+    {
+      path: "/contact",
+      element: <Contact/>,
+    },
+    {
+      path: "/faq",
+      element: <Faq/>,
     }
 
 ]);
