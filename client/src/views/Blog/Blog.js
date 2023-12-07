@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './Blog.css';
 import Navbar from "./../../components/Navbar/Navbar.js"
+import Footer from "./../../components/Footer/Footer.js"
 import axios from "axios";
 
 function Blog() {
@@ -50,7 +51,7 @@ function Blog() {
                 </div>
             </div>
 
-
+            <Footer />
         </div>
     </>
 }
