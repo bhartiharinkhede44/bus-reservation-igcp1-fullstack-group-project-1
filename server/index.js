@@ -36,7 +36,7 @@ app.post('/signup', async (req, res) => {
         res.json({
             success: true,
             data: saveduser,
-            message: "fetch studendt"
+            message: "Congratulations! Signup Successfully"
         })
     }
 
