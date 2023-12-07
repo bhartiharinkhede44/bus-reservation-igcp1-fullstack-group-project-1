@@ -29,7 +29,7 @@ function Navbar() {
                                 localStorage.removeItem("user");
                                 window.location.href = "/login";
                             })}>
-                            <span className="logout-btn">Logout</span>
+                            <span className="logout-button">Logout</span>
                         </span>) : null
                     }
                 </div>

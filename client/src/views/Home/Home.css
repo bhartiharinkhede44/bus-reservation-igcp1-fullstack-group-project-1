@@ -9,33 +9,52 @@
     padding: 0;
 }
 
-.flex-container{
+.flex-container {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
-.card{
+.text-center{
+    text-align: center;
+    font-size: 60px;
+    color: orangered;
+   
+    
+}
+
+.card {
     border: 0px solid black;
-    padding: 20px 50px;
- width: fit-content;
-   padding: 50px 10px;
+    padding: 50px 70px;
+    width: fit-content;
+    background-color: rgb(245, 73, 11);
     display: flex;
     justify-content: space-evenly;
-    margin:500px 50px;
-    box-shadow: 0px 1px 1px 2px white;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 450px auto;
+    box-shadow: 2px 2px 3px 2px gray;
+
 }
-.design{
+
+.design {
     text-align: center;
     margin: 10px;
     padding: 10px;
     font-size: 20px;
     font-size: 27px;
 }
-.book-btn{
+
+.book-btn {
     margin: 5px;
     padding: 5px 10px;
     font-size: 15px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
 }
-.places{
+
+.places {
     border: none;
     box-shadow: 0px 1px 1px 2px gray;
     background-color: white;
@@ -44,17 +63,44 @@
     border-radius: 10px;
 
 }
-.img{
+
+/* 
+@media screen and (max-width:768px) { */
+
+.img {
     border-radius: 50%;
-    height: 200px;  
+    height: 200px;
     margin: 30px;
     width: 200px;
-    box-shadow:0px 3px 1px 1px gray;
+    box-shadow: 0px 3px 1px 1px gray;
 }
 
-.img:hover{
-   border: 1px solid black;
-   margin:10px;
-   padding:10px;
- 
+.img:hover {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+
+}
+/* } */
+
+.logo{
+    border: 0px solid black;
+    margin: 50px;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 2px 2px 3px 1px black;
+}
+.design-logo{
+    background-color: rgb(249, 245, 245);
+    margin: 80px;
+    box-shadow: 0px 1px 1px 1px gray;
+    border-radius: 20px;
+}
+.logo:hover{
+    border: 0px solid black;
+    background-color: white;
+    border-radius: 50px;
+    margin: 60px;
+    padding: 30px;
+    box-shadow: 2px 2px 3px 1px black;
 }

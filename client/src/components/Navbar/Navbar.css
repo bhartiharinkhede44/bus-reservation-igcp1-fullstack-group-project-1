@@ -2,7 +2,7 @@
     color: gold;
 }
 .design-nav {
-    background-color: rgb(92, 68, 68);
+    background-color:black;
     padding: 30px 15px;
     color: white; 
     margin: 0px;
@@ -10,18 +10,16 @@
 .text-reserve{
     color: white;
    position: relative;
-   top:18px;
-  
+   top:18px;  
 }
-  .logout-btn{
-    margin: 15px;
+  .logout-button{
+    margin: 10px 35px;
     padding: 15px;
     color: rgb(245, 210, 15);
 }
   .logout-btn:hover{
-    margin: 15px;
-    padding: 15px;
     color:black;
+    margin: 0px 35px;
 }
 .font {
     font-size: 30px;
@@ -72,7 +70,7 @@ body{
     font-size: 27px;
     cursor: pointer;
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:768px) and (min-width:300) {
     .design {
         display: flex;
         flex-direction: column;
