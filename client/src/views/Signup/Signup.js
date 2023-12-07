@@ -80,12 +80,12 @@ const SignUp = () => {
       <Navbar />
       <div className='signup-form-container'>
         <div className='signup-container'>
-          <div>
+          <div className='image-container'>
             <img src={bus} />
           </div>
           <div className='form-main-container'>
             <form >
-              <h1 className='text-center'>SignUp</h1>
+              <h1 className='text-center'>WellCome! SignUp here</h1>
               <div className='input-container'>
                 <label htmlFor='name' className='signpu-label'>Name : </label><br />
                 <input type='text'
@@ -157,20 +157,26 @@ const SignUp = () => {
                 />
               </div>
 
-              <div>
-                <input type='radio' name='gender' id='male' checked={gender === 'male'}
-                  onClick={() => {
-                    setGender('male')
-                  }}
-                />
-                <label>Male</label>
+              <div className='gender-container'>
+                <div  className='male-container'>
+                  <input type='radio' name='gender' id='male' checked={gender === 'male'}
+                    onClick={() => {
+                      setGender('male')
+                    }}
+                    className='gender'
+                  />
+                  <label className='male-gender'>Male</label>
+                </div>
 
-                <input type='radio' name='gender' id='female' checked={gender === 'female'}
-                  onClick={() => {
-                    setGender('female')
-                  }}
-                />
-                <label>Female</label>
+                <div className='male-container'>
+                  <input type='radio' name='gender' id='female' checked={gender === 'female'}
+                    onClick={() => {
+                      setGender('female')
+                    }}
+                    className='gender'
+                  />
+                  <label className='female-gender'>Female</label>
+                </div>
               </div>
               <div className='button-container'>
                 <button type='button' onClick={signup} className='signup-btn'>SignUp</button>

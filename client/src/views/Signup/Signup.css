@@ -11,11 +11,13 @@
 
 .signup-container{
     display: flex;
+    width: 1100px;
     background-color: white;
-    padding: 70px;
+    padding: 40px 100px;
     border-radius: 5px;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .signpu-input{
@@ -24,7 +26,7 @@
     font-size: 18px;
     border: none;
     padding: 10px;
-    width: 300px;
+    width: 100%;
 }
 
 .signpu-label{
@@ -33,12 +35,14 @@
 
 .input-container{
     margin-bottom: 40px;
-    display: flex;
+    /* display: flex; */
     /* justify-content: center; */
 }
 
 .form-main-container{
-    margin-right: 40px;
+    /* margin-right: 40px; */
+    width: 450px;
+    /* border: 2px solid black; */
 }
 
 .signup-btn{
@@ -66,4 +70,35 @@
 .again-login{
     font-size: 25px;
     text-decoration: none;
+}
+
+.gender{
+    color: #5c4444;
+    height: 30px;
+    width: 30px;
+}
+
+.male-gender{
+    font-size: 25px;
+    color: #5c4444;
+}
+
+.female-gender{
+    font-size: 25px;
+    color: #5c4444;
+}
+
+.gender-container{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.male-container{
+    display: flex;
+    align-items: center;
+}
+
+.image-container img{
+    width: 600px;
 }
