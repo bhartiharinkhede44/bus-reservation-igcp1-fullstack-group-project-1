@@ -2,6 +2,8 @@ import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Login.css'
+import Navbar from '../../components/Navbar/Navbar'
+import Footer from '../../components/Footer/Footer'
 
 
 const Login = () => {
@@ -34,6 +36,8 @@ const Login = () => {
   }, [])
 
   return (
+    <>
+    <Navbar/>
     <div className='login-body'>
 
       <div className='j-content-center '>
@@ -80,6 +84,8 @@ const Login = () => {
         </form>
       </div>
     </div>
+    <Footer/>
+    </>
   )
 }
 
