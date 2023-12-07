@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar/Navbar'
 import bus from './signup-bus.webp'
 import './Signup.css'
+import Footer from '../../components/Footer/Footer'
 
 
 const SignUp = () => {
@@ -85,7 +86,7 @@ const SignUp = () => {
           </div>
           <div className='form-main-container'>
             <form >
-              <h1 className='text-center'>WellCome! SignUp here</h1>
+              <h1 className='heading'>WellCome! SignUp here</h1>
               <div className='input-container'>
                 <label htmlFor='name' className='signpu-label'>Name : </label><br />
                 <input type='text'
@@ -184,11 +185,13 @@ const SignUp = () => {
                 <p>
                   <Link to={'/login'} className='again-login'>Already have account? <span className='login'>Login</span></Link>
                 </p>
+                
               </div>
             </form >
           </div >
         </div>
       </div>
+      <Footer/>
     </>
   )
 }

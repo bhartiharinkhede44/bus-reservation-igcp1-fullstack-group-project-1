@@ -1,3 +1,8 @@
+.heading{
+text-align: center;
+color: #5c4444;
+font-size: 40px;
+}
 
 .signup-form-container{
     display: flex;
