@@ -1,12 +1,13 @@
 .Blog-page{
-    background-image: url("./pasenger.png");
+    background-image: url("./turist.jpg");
     background-size: cover;
-    height: 100vh;
+    height: 120vh;
     width: 100%;
 }
 .fash-page{
-    height: 80vh;
+    height: 100vh;
     position: relative;
+    background-color: rgba(113, 113, 113, 0.315);
 }
 .title{
     color: aliceblue;
@@ -15,11 +16,11 @@
     font-size: 80px;
     text-shadow: rgb(52, 32, 25) 1px 0 10px;
     position: absolute;
-    top: 20%;
-    left: 34%;
+    top: 18%;
+    right: 24%;
 }
 .quote{
-    color: orangered;
+    color: #fff;
     text-align: center;
     display: block;
     width: 500px;
@@ -28,5 +29,41 @@
     text-shadow: rgb(14, 12, 11) 1px 0 10px;
     position: absolute;
     top: 50%;
-    left: 30%;
+    right: 20%;
+}
+.blog-container{
+    background-color:  #d8caca;
+    height: 100%;
+}
+.blog-image{
+    height: 300px;
+    margin: 20px 20px;
+
+}
+.blog-card{
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.blog-info{
+    width: 700px;
+    margin-top: 2px;
+    position: relative;
+}
+.blog-title{
+    font-size: 30px;
+}
+.blog-description{
+    width: 500px;
+}
+.location{
+    position: absolute;
+    right: 30px;
+    bottom: 0px;
+}
+.rating{
+    position: absolute;
+    right: 30px;
 }
