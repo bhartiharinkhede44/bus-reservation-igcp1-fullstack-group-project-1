@@ -12,16 +12,16 @@ function Footer() {
           
                
                 <div className="design-footer">
-                <h1 className='heading text-center'>Bus Reservation</h1><br />
+                <h1 className=' text-center color'>Bus Reservation</h1><br />
               
-                    {/* <div>
-                  {/* <h3 className='fontsize'>Golden Lines</h3><br />
-                        {/* <span class="description">◼ Debit What Comes In, Credit What Goes Out<br />
+                   {/* <div> */}
+                   {/* <h3 className='fontsize'>Golden Lines</h3><br />
+                         <span class="description">◼ Debit What Comes In, Credit What Goes Out<br />
                             ◼ Debit the Receiver, Credit the Giver.<br />
                             ◼ Debit All Expenses and Losses, Credit all Incomes and Gains.<br />
-                        </span> *
+                        </span>  */}
 
-                    </div>  */}
+                    {/* </div>  */}
 
                     <div>
                         <h3 className='fontsize'>✔Quick Links</h3>

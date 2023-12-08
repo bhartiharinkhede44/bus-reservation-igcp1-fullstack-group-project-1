@@ -3,8 +3,12 @@ import express from "express";
 import dotenv from 'dotenv';
 dotenv.config();
 import User from "./src/Model/User.js";
+
+import {postApiSearch,getSearchApi,postSearchBuses,getSearchBuses}from "./src/controlers/search.js"
 import { PostApiV1Blogs , GetApiV1Blogs } from "./src/controlers/Blog.js";
 
+import path from 'path';
+const __dirname = path.resolve();
 
 const app = express();
 app.use(express.json());
@@ -77,10 +81,26 @@ app.post('/login', async (req, res) => {
     }
 })
 
+app.post('/api/searchbuses',postSearchBuses)
+
+app.get('/api/searchbuses/user/:_id' ,getSearchBuses)
+
 app.post("/api/v1/blogs" , PostApiV1Blogs)
 app.get("/api/v1/blogs" , GetApiV1Blogs)
 
+app.post("/api/search" , postApiSearch)
+app.get("/api/search" , getSearchApi)
+
 const PORT = process.env.PORT || 5000;
+
+
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+  
+    app.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname, '..' , 'client', 'build', 'index.html'))
+    });
+  }
 
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`)

@@ -16,9 +16,11 @@ import Image9 from "./h4.png"
  import logo2 from "./pick-up.png"
  import logo3 from "./secure-payment.png"
  import logo4 from "./noridingimg.png"
+ import black from "./black.png"
 
 import Navbar from "./../../components/Navbar/Navbar"
 import Footer from "./../../components/Footer/Footer"
+
 function Home() {
     const [city, setcity] = useState("");
     const [citys, setcitys] = useState("");
@@ -28,24 +30,27 @@ function Home() {
     const searchBus = async () => {
         if (!city || !bookDay || !pickupdate || !citys) {
             window.location.href = "/searchbus"
-            // alert("All dields are required")
+            //
+            // alert("All fields are required")
             return
-
         }
+        const user=JSON.parse(localStorage.getItem("user" || "{}"));
+        const response = await axios.post('/api/search', busData);
         const busData = {
+            user:user._id,
             city,
             citys,
             bookDay,
             pickupdate,         
         }
-        const response = await axios.post('/api/transactions', busData);
+       if(response?.data?.success){
         alert(response.data.message)
-
+        window.location.href="/searchbook"
+    }
        setcity('')
        setpickupDate('')
        setBook('')
-       setcitys('')
-     
+       setcitys('')     
     }
 
     return (<>
@@ -54,7 +59,7 @@ function Home() {
 
             <div className='flex-container '>
               
-                <div className='  card'>
+                <div className='  card-home'>
                     <div className='container '>
 
                         <span className="design"> From </span>
@@ -126,13 +131,24 @@ function Home() {
                 <img src={Image9} className='img' />
             </div>
         </div>
-        <div className='flex-container design-logo '>
 
-        <img src={logo1} className='logo'/> 
-        <img src={logo2} className='logo'/> 
-        <img src={logo3} className='logo'/> 
-        <img src={logo4} className='logo'/> 
+<div className='flex-direction'>
+    <div>
+<img src={black} className='image-bus'/>
+    </div>
+
+    <div className='bus-size'>
+        <h3 className='benifit-text'>Benefits of an Online Bus Reservation System..🚌</h3><br/>
+    Gone are the days people used to stand in lines and waited patiently for their turn to book a bus. Not just a bus booking, every sector needed a way to book tickets.Now everything is done online right from buying clothes, accessories, groceries, flight tickets and even bus tickets. Booking bus tickets is the same as train and flight tickets booking. If you want to know further reasons why booking bus tickets online is important, then go through the below list of advantages which you get while doing online bus booking.
+    </div>
+</div>
+
+<div className="background-image-about  d-flex container shadow">
+        <div>
+          <h1 className="text-light text-center ">What People Are Saying<br /> About Us</h1><br />
+          <h3 className="text-light  center">We provide our bast service our client always and <br />try to achieve our client trust....!</h3>
         </div>
+      </div>
         <Footer/>
     </>)
 }

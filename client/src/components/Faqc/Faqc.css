@@ -1,0 +1,10 @@
+.faq-container{
+    border-bottom:  2px solid rgb(245, 144, 50);  
+}
+.card-faq{
+    border: 1px solid black;
+    margin: 30px auto;
+    padding: 30px 100px;
+    width: 90%;
+    background-color: rgb(245, 241, 241);
+}

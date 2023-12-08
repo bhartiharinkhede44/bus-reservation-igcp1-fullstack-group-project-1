@@ -19,6 +19,7 @@ function Navbar() {
                     <Link to="/signup" className="container-text  design"> Signup</Link>
                     <Link to="/blog" className="container-text  design">Blog</Link>
                     <Link to="/faq" className="container-text  design">FAQ</Link>
+                    <Link to="/review" className="container-text  design">Review</Link>
                     <Link to="/contact" className="container-text  design"> Contact</Link>
                 </div>
                 <div className="user ">
