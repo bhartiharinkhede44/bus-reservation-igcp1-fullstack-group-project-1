@@ -8,6 +8,8 @@ import Contact from "./views/Contact/Contact"
 import Blog from './views/Blog/Blog';
 import Faq from "./views/Faq/Faq"
 import SearchBus from "./views/SearchBus/SearchBus"
+import Review from "./views/Reviews/Reviews"
+import Book from "./views/BookNow/BookNow"
 // import BookTicket from "./views/BookTicket/BookTicket"
 import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 
@@ -43,12 +45,16 @@ const router = createBrowserRouter([
     {
       path: "/searchbus",
       element: <SearchBus/>,
-    }
+    },
+    {
+      path: "/review",
+      element: <Review/>,
+    },
 
-    // {
-    //   path: "/bookTicket",
-    //   element: <BookTicket/>,
-    // }
+    {
+      path: "/booknow",
+      element: <Book/>,
+    }
 
 ]);
 

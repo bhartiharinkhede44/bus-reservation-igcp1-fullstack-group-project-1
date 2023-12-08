@@ -8,7 +8,30 @@
     margin-top: 0;
     padding: 0;
 }
+.background-image-about{
+    background-image: url(./footer1.png);
+    width: 100%;
+   opacity: 0.9;
+   margin-bottom: 20px;
+  
 
+}
+.center{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+.about-img{
+    width: 210px;
+    height: 250px;
+    display: flex;
+    justify-content:space-evenly;
+    background-color: none;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+   
+}
 .flex-container {
     display: flex;
     justify-content: space-evenly;
@@ -23,7 +46,7 @@
     
 }
 
-.card {
+.card-home {
     border: 0px solid black;
     padding: 50px 70px;
     width: fit-content;
@@ -62,6 +85,26 @@
     padding: 20px 10px;
     border-radius: 10px;
 
+}
+.benifit-text{
+    font-size: 35px;
+    color: black;
+   
+
+}
+.bus-size{
+    font-size: 20px;
+    color: orangered;
+text-align: center;
+/* margin-top: 70px ; */
+margin: 60px 30px;
+}
+
+.image-bus{
+    height: 400px;
+    margin: 30px;
+    padding: 10px;
+    
 }
 
 /* 
