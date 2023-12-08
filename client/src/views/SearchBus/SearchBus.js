@@ -10,39 +10,20 @@ function SearchBus() {
     const [user, setUser] = useState({});
     const [searchBus, setSearchBus] = useState([]);
   
-    const loadBus = async () => {
-      const user = JSON.parse(localStorage.getItem("user"));
-      const userId = user._id;
-      if (!userId) {
-        return;
-      }
-      const response = await axios.get(`/api/searchbus/${userId}`);
-      setSearchBus(response?.data?.data);
-      console.log(response?.data?.data);
-    };
-  
-    useEffect(
-      () => {
-        loadBus();
-      },
-      [user],
-      [searchBus]
-    );
-  
-    useEffect(() => {
-      const storageUser = JSON.parse(localStorage.getItem("user") || "{}");
-      if (storageUser?.email) {
-        setUser(storageUser);
-      } else {
-        alert("You are not logged in!");
-        window.location.href = "/login";
-      }
-    }, []);
-
     return<>
     <Navbar/>
     <div className='bg-img-search'>  </div>
-    <BookCard/>
+    {/* {
+         searchBus?.map((searching, index) => {
+            const { _id, name, imaheUrl, category,price } = searching;
+
+            return (
+                <>
+                <h1>{name}</h1>
+                </>
+            )
+         }) */}
+    
    <div className='searchcard'>
 <div className='flex-search-bar'>
     <h2>Pune to Nashik</h2>

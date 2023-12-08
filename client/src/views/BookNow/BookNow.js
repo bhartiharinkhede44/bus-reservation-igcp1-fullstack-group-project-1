@@ -5,65 +5,51 @@ import './BookNow.css'
 import { useParams } from 'react-router-dom'
 
 const Buy = () => {
-    const { _id } = useParams();
+    // const { _id } = useParams();
 
     const [productDetails, setproductDetails] = useState({})
 
     let [quantity, SetQuantity] = useState(1)
-    const [shippingAdress, setShippingAddress] = useState('')
-    const [deliverycharges, setDeliveryCharges] = useState(0)
-
 
     const loadProductDetails = async () => {
 
-        const response = await axios.get(`/api/book/${_id}`)
+        const response = await axios.get('/api/book')
+        alert(response?.data?.message)
 
         setproductDetails(response?.data?.data)
     }
-
 
     useEffect(() => {
         loadProductDetails()
 
     })
-
-
     const increQuantity = () => {
-
         SetQuantity(++quantity)
     }
 
     const decrQuantity = () => {
-
         if (quantity === 1) return
-
         SetQuantity(--quantity)
     }
 
+    // const orderPlace = async () => {
 
-    const orderPlace = async () => {
+    //     const userStore = JSON.parse(localStorage.getItem('user') || '{}')
 
-        const userStore = JSON.parse(localStorage.getItem('user') || '{}')
+    //     const newOrderUser = {
+    //         user: userStore?._id,
+    //         product: productDetails._id,
+    //         quantity: quantity,
+    //     }
 
-        const newOrderUser = {
-            user: userStore?._id,
-            product: productDetails._id,
-            quantity: quantity,
-            shipping_address: shippingAdress,
-            delivery_charges: deliverycharges
-        }
+    //     const response = await axios.get('/api/book', newOrderUser)
 
-        const response = await axios.post('/api/book', newOrderUser)
+    //     alert(response?.data?.message)
 
-        alert (response?.data?.message)
-
-        if (response?.data.success) {
-            window.location.href = "/booknow"
-        }
-    }
-
-
-
+    //     if (response?.data.success) {
+    //         window.location.href = "/booknow"
+    //     }
+    // }
     return (
         <div className='container buyDetails-main-container mt-5'>
 
@@ -77,57 +63,20 @@ const Buy = () => {
                     <div className='pt-3'>
                         <h2>{productDetails.name}</h2>
                         <h2 className='price' >Price : ₹ {productDetails.price} /-</h2>
-                        <p>{productDetails.description}</p>
+                        {/* <p>{productDetails.description}</p> */}
                         <button type="button"
                             onClick={increQuantity} className='quantitybtn'>+</button>
                         <button className='quantity '>{quantity}</button>
                         <button type="button"
                             onClick={decrQuantity} className='quantitybtn'>-</button><br /><br />
-
-                        <input type="text"
-                            placeholder='enter your shiiping address'
-                            value={shippingAdress}
-                            className='inputshippingaddress'
-
-                            onChange={(e) => {
-                                setShippingAddress(e.target.value)
-                            }}
-                        /><br />
-
-                        <div className='mt-4'>
-                            < input type="radio"
-                                value={deliverycharges}
-                                name='deliverycharges'
-                                className='deliverycharges'
-                                onClick={() => {
-                                    setDeliveryCharges(40)
-                                }} /> <label className='ms-1'>Normal delivery charges</label>
-
-                            < input type="radio"
-                                value={deliverycharges}
-                                name='deliverycharges'
-                                className='deliverycharges ms-5'
-
-                                onClick={() => {
-                                    setDeliveryCharges(100)
-                                }}
-
-                            /><label className='ms-2'>SuperFast delivery charges</label> 
-                        </div>
-
-                         
-
                     </div>
                     <button type="button"
-                        onClick={orderPlace}
-                        className='button order-now-btn mt-4'>Order Now</button>
+                        onClick={loadProductDetails}
+                        className='button order-now-btn mt-4'>Submit</button>
                 </div>
-
-
             </div>
-
         </div>
     )
 }
 
-export default Buy
+export default Buy;

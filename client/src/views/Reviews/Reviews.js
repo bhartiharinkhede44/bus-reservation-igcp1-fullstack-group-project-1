@@ -8,32 +8,6 @@ import Footer from "./../../components/Footer/Footer"
 
 const Review = () => {
   const [taskList, setTaskList] = useState([
-    // {
-    //   id: 1,
-    //   title: "RenTrip Gonna be My First Choice Forever",
-    //   description:
-    //     "It has been an awesome experience for me when I got to roam places like Dipor Bil, Kamakhya Temple, Umanadna temple and many more places. Before I started the journey I wasn't sure I would get chance to visit and these all beautiful places.",
-    //   profession: "Senior Teacher, Bhopal",
-    //   emoji: "⭐⭐⭐⭐⭐",
-    // },
-    // {
-    //   id: 2,
-    //   title: "Trip to ASSAM and MEGHALAYA!",
-    //   description:
-    //     "We had booked two bikes (Pulsar 180 & 150) for my ASSAM and MEGHALAYA trip from Rentrip Guwahati. The bikes were very well maintained and perfectly clean when they handed the key. So no trouble with the bike at any place .",
-    //   name: "Know Startup",
-    //   profession: "News",
-    //   emoji: "⭐⭐⭐⭐⭐",
-    // },
-    // {
-    //   id: 3,
-    //   title: "Leading motorbike rental service providers!",
-    //   description:
-    //     "We had booked two bikes (Pulsar 180 & 150) for my ASSAM and MEGHALAYA trip from Rentrip Guwahati. The bikes were very well maintained and perfectly clean when they handed the key. So no trouble with the bike at any place .",
-    //   name: "Mandy Varshaney",
-    //   profession: "TripAdvisor",
-    //   emoji: "⭐⭐⭐⭐⭐",
-    // },
   ]);
 
   const [title, setTitle] = useState("");
@@ -129,12 +103,14 @@ const Review = () => {
 
   return (
     <>
+     <div className="background-color">
       <Navbar />
-      <h1 className="text-center mt-5 title-main">PASSENGER REVIEW</h1>
-      <CustomerCard />
+     
+      <h1 className="text-center">PASSENGER REVIEW</h1>
+      {/* <CustomerCard /> */}
 
       <div className="container1">
-        <h1 className="text-center mt-5 title-main">PASSENGER EXPERIENCES</h1>
+        {/* <h1 className="text-center title-main">PASSENGER EXPERIENCES</h1> */}
 
         <div className="input-container mt-5 shadow">
           <form>
@@ -200,7 +176,7 @@ const Review = () => {
               ) : (
                 <button
                   type="button"
-                  className="add-button mx-5 px-5 shadow"
+                  className="review-btn"
                   onClick={addReviewToList}
                 >
                   Add Review
@@ -210,7 +186,7 @@ const Review = () => {
           </form>
         </div>
 
-        <div className="d-flex justify-content-evenly mt-5 flex-wrap">
+        <div  className="flex-container">
           {taskList.map((taskItem, index) => {
             const { id, title, description, name, profession, emoji } =
               taskItem;
@@ -229,6 +205,7 @@ const Review = () => {
             );
           })}
         </div>
+      </div>
       </div>
       <Footer />
     </>

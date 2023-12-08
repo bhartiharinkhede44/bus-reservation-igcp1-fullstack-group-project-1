@@ -140,7 +140,7 @@ app.post('/login', async (req, res) => {
 
 app.post('/api/searchbuses',postSearchBuses)
 
-app.get('/api/searchbuses/user/:_id' ,getSearchBuses)
+app.get('/api/searchbuses' ,getSearchBuses)
 
 app.post("/api/v1/blogs" , PostApiV1Blogs)
 app.get("/api/v1/blogs" , GetApiV1Blogs)

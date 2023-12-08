@@ -50,12 +50,10 @@ const router = createBrowserRouter([
       path: "/review",
       element: <Review/>,
     },
-
     {
       path: "/booknow",
       element: <Book/>,
     }
-
 ]);
 
 root.render(
