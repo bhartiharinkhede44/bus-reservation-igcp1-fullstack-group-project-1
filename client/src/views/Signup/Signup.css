@@ -1,6 +1,6 @@
 .heading{
 text-align: center;
-color: #5c4444;
+color: orangered;
 font-size: 30px;
 }
 
@@ -52,18 +52,19 @@ font-size: 30px;
 }
 
 .signup-btn{
-    background-color: #5c4444;
+    background-color: orangered;
     color: white;   
-    padding: 10px 30px;
-    width: 200px;
+    padding: 10px 120px;
+    /* width: 200px; */
     border-radius: 10px;
     border: none;
-    font-size: 20px; 
-    margin: 20px 40px 20px 0;
+    font-size: 30px; 
+    /* margin: 20px 40px 20px 0; */
+    text-align: center;
 }
 
 .login{
-    color: #5c4444;
+    color: orangered;
     font-weight: bold;
 }
 

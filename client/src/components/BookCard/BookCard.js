@@ -17,12 +17,11 @@ const loadUser = ()=>{
         
     <div>
 
-
       <div className='product-card'>
 
         <img src={productImg} alt={name} className='product-img' />
         <h2 className='product-name'>{name}</h2>
-        <p className='product-description'>{description}</p>
+        {/* <p className='product-description'>{description}</p> */}
         <p className='product-price'> ₹ {price} /-</p>
 
         {
@@ -31,7 +30,6 @@ const loadUser = ()=>{
           onClick={() => {
             window.location.href = `/booknow/${_id}`
           }}
-
 
         >Book now</Link>
         

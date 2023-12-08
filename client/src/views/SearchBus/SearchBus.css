@@ -1,4 +1,4 @@
-/* .searchcard{
+.searchcard{
 border: 1px solid  black;
 width: 1200px;
 margin: 30px auto;
@@ -10,8 +10,9 @@ box-shadow: 0px 1px 0px 1px gray;
     justify-content: space-between;
 
 }
-.bg-img{
-    background-image: linear-gradient(rgba(246, 144, 144, 0.7), rgba(10, 10, 10, 0.7)), url(./bus1.png);
+
+.bg-img-search{
+    background-image: linear-gradient(rgba(146, 143, 143, 0.7), rgba(241, 187, 187, 0.7)), url(./bus1.png);
     opacity: 0.9;
     height: 800px;
     width: 100vw;
@@ -47,4 +48,4 @@ box-shadow: 0px 1px 0px 1px gray;
     padding: 20px 40px;
     box-shadow: 0px 1px 0px 1px gray;
   }
-} */
+}

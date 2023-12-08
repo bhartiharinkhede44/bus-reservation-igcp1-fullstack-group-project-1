@@ -29,7 +29,7 @@ function Home() {
 
     const searchBus = async () => {
         if (!city || !bookDay || !pickupdate || !citys) {
-            window.location.href = "/booknow"
+            window.location.href = "/searchbus"
             //
             // alert("All fields are required")
             return
@@ -138,7 +138,7 @@ function Home() {
     </div>
 
     <div className='bus-size'>
-        <h3 className='benifit-text'>Benefits of an Online Bus Reservation System..🚌</h3><br/>
+        <h2 className='benifit-text-home'>Benefits of an Online Bus Reservation System..🚌</h2>
     Gone are the days people used to stand in lines and waited patiently for their turn to book a bus. Not just a bus booking, every sector needed a way to book tickets.Now everything is done online right from buying clothes, accessories, groceries, flight tickets and even bus tickets. Booking bus tickets is the same as train and flight tickets booking. If you want to know further reasons why booking bus tickets online is important, then go through the below list of advantages which you get while doing online bus booking.
     </div>
 </div>
@@ -146,7 +146,7 @@ function Home() {
 <div className="background-image-about  d-flex container shadow">
         <div>
           <h1 className="text-light text-center ">What People Are Saying<br /> About Us</h1><br />
-          <h3 className="text-light  center">We provide our bast service our client always and <br />try to achieve our client trust....!</h3>
+          <h3 className="text-light  center">We provide our bast service our passenger always and <br />try to achieve our passenger trust....!</h3>
         </div>
       </div>
         <Footer/>

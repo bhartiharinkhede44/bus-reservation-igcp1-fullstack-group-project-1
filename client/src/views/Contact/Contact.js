@@ -1,7 +1,7 @@
 import './Contact.css'
 import Navbar from './../../components/Navbar/Navbar'
 import Footer from './../../components/Footer/Footer'
-import showToast from 'crunchy-toast';
+// import showToast from 'crunchy-toast';
 import { useState } from 'react'
 const Contact = () => {
     const [name, setName] = useState('')
@@ -24,15 +24,15 @@ const Contact = () => {
     const saveMessage = () => {
 
         if (!name) {
-            showToast('please fill name', 'alert', 3000);
+            alert('please fill name');
             return;
         }
         if (!mobile) {
-            showToast('This is a sample toast message', 'success', 3000);
+            alert('This is a sample toast message');
             return;
         }
         if (!email) {
-            showToast('This is a sample toast message', 'success', 3000);
+            alert('This is a sample toast message');
             return;
         }
         if (!subject) {
@@ -40,7 +40,7 @@ const Contact = () => {
             return;
         }
         if (!message) {
-            showToast('This is a sample toast message', 'success', 3000);
+            alert('This is a sample toast message');
             return;
         }
         const saveData = {
@@ -48,7 +48,7 @@ const Contact = () => {
 
         };
         localStorage.setItem('currentUser', JSON.stringify(saveData));
-        showToast('Contact successfully', 'success', 3000);
+        alert('Contact successfully');
 
         setEmail('');
         setName('')
