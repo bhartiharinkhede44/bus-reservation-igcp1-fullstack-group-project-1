@@ -62,7 +62,7 @@ const Contact = () => {
         <div>
             <Navbar />
             <h1 className=' contact-heading'>Contact Us </h1>
-            <p className='contact-text'>"Need help planning your journey or encountered an issue with your booking? Contact us—we're dedicated to resolving your concerns." </p>
+            <p className='contact-text'>"Need help planning your journey or encountered an issue with your booking? Contact us—we're dedicated to resolving your concerns...🙂" </p>
 
             
             <div className='contact-container  '>
