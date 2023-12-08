@@ -29,7 +29,7 @@ function Home() {
 
     const searchBus = async () => {
         if (!city || !bookDay || !pickupdate || !citys) {
-            window.location.href = "/searchbus"
+            window.location.href = "/booknow"
             //
             // alert("All fields are required")
             return
@@ -45,7 +45,7 @@ function Home() {
         }
        if(response?.data?.success){
         alert(response.data.message)
-        window.location.href="/searchbook"
+        // window.location.href="/booknow"
     }
        setcity('')
        setpickupDate('')
