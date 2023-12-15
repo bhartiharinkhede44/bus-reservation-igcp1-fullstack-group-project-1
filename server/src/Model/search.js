@@ -1,16 +1,17 @@
 import { Schema , model } from "mongoose";
 
-const SearchSchema = new Schema({
-    to :{
-        type : String
-    },
-    from :{
+const SearchSchema = new Schema({     
+    city :{
         type : String,
-        require : true
+        required : true
     },
-    date :{
+    cities :{
+        type : String,
+        required : true
+    }, 
+    pickupdate:{
         type : Number ,
-        require : true,
+        required : true,
     }
 },{timestamps : true})
 

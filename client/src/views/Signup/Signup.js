@@ -88,19 +88,19 @@ const SignUp = () => {
             <form >
               <h1 className='heading'>WellCome! SignUp here</h1>
               <div className='input-container'>
-                <label htmlFor='name' className='signpu-label'>Name : </label><br />
+                <label htmlFor='name' className='signpu-label'>Name : </label>
                 <input type='text'
                   placeholder='Enter Your Name'
                   id='name'
                   value={name}
                   onChange={(e) =>
                     setName(e.target.value)
-                  } className='signpu-input' />
+                  } className='signpu-input-box' />
               </div>
 
               <div className='input-container'>
-                <label htmlFor='email' className='signpu-label'>Email : </label>
-                <br />
+                <label htmlFor='email' className='signpu-label'>Email   : </label>
+                
                 <input
                   type='text'
                   placeholder='Enter Your Email'
@@ -109,13 +109,13 @@ const SignUp = () => {
                   onChange={(e) =>
                     setEmail(e.target.value)
                   }
-                  className='signpu-input'
+                  className='signpu-input-box'
                 />
               </div>
 
               <div className='input-container'>
                 <label htmlFor='password' className='signpu-label'>Password : </label>
-                <br />
+                
                 <input
                   placeholder='Enter Your Password'
                   type='password'
@@ -124,13 +124,13 @@ const SignUp = () => {
                   onChange={(e) =>
                     setPassword(e.target.value)
                   }
-                  className='signpu-input'
+                  className='signpu-input-box'
                 />
               </div>
 
               <div className='input-container'>
-                <label htmlFor='mobile' className='signpu-label'>Mobile : </label>
-                <br />
+                <label htmlFor='mobile' className='signpu-label'>Mobile   : </label>
+                
                 <input
                   type='text'
                   placeholder='Enter Your Mobile'
@@ -139,13 +139,13 @@ const SignUp = () => {
                   onChange={(e) =>
                     setMobile(e.target.value)
                   }
-                  className='signpu-input'
+                  className='signpu-input-box'
                 />
               </div>
 
               <div className='input-container'>
-                <label htmlFor='address' className='signpu-label'>Adress : </label>
-                <br />
+                <label htmlFor='address' className='signpu-label'>Adress   : </label>
+                
                 <input
                   type='text'
                   placeholder='Enter Your Adress'
@@ -154,7 +154,7 @@ const SignUp = () => {
                   onChange={(e) =>
                     setAdress(e.target.value)
                   }
-                  className='signpu-input'
+                  className='signpu-input-box'
                 />
               </div>
 
@@ -179,10 +179,10 @@ const SignUp = () => {
                   <label className='female-gender'>Female</label>
                 </div>
               </div>
-              <div className='button-container'>
+              <div >
                 <button type='button' onClick={signup} className='signup-btn'>SignUp</button>
 
-                <p>
+                <p>  
                   <Link to={'/login'} className='again-login'>Already have account? <span className='login'>Login</span></Link>
                 </p>
                 

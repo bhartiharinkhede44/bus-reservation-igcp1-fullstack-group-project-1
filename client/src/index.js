@@ -10,6 +10,7 @@ import Faq from "./views/Faq/Faq"
 import SearchBus from "./views/SearchBus/SearchBus"
 import Review from "./views/Reviews/Reviews"
 import Book from "./views/BookNow/BookNow"
+// import BookCard from "./components/BookCard/BookCard"
 // import BookTicket from "./views/BookTicket/BookTicket"
 import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 
@@ -53,7 +54,12 @@ const router = createBrowserRouter([
     {
       path: "/booknow",
       element: <Book/>,
-    }
+    },
+
+    // {
+    //   path: "/bookcard",
+    //   element: <BookCard/>,
+    // }
 ]);
 
 root.render(

@@ -3,9 +3,9 @@ import express from "express";
 import dotenv from 'dotenv';
 dotenv.config();
 import User from "./src/Model/User.js";
-import Book from "./src/Model/Book.js"
+// import Book from "./src/Model/Book.js"
 
-import {postApiSearch,getSearchApi,postSearchBuses,getSearchBuses}from "./src/controlers/search.js"
+import {postApiSearch,getSearchApi,postSearchBuses,getSearchBuses,postApiReview,getApiReview}from "./src/controlers/search.js"
 import { PostApiV1Blogs , GetApiV1Blogs } from "./src/controlers/Blog.js";
 
 import path from 'path';
@@ -53,61 +53,7 @@ app.post('/signup', async (req, res) => {
     }
 })
 
-app.post('/api/book', async (req, res) => {
 
-    const { name, price, category, productImg } = req.body
-
-    const newBook= new Book({
-        name, price, category, productImg
-    })
-
-
-    try {
-        const savedBook= await newBook.save()
-
-        return res.json({
-            data: savedBook,
-            success: true,
-            message: "Booking added"
-        })
-    }
-    catch (e) {
-        return res.json(
-            {
-                message: (e.message)
-            }
-        )
-    }
-})
-// get all products
-app.get('/api/book', async (req, res) => {
-
-    const book = await Book.find();
-
-    res.json({
-        success: true,
-        data: book,
-        message: "all fetched successfuly"
-
-    })
-})
-
-
-//get data by id 
-
-app.get('/api/book/:_id',async(req,res)=>{
-
-    const{ _id }= req.params
-    
-    const findOneBook = await Book.findOne({ _id:_id} )
-
-    res.json({
-        data:findOneBook,
-        message:"fetch product successfully"
-    })
-
-
-})
 
 app.post('/login', async (req, res) => {
     const { email, password } = req.body
@@ -138,6 +84,9 @@ app.post('/login', async (req, res) => {
     }
 })
 
+app.post("/api/search" , postApiSearch)
+app.get("/api/search" , getSearchApi)
+
 app.post('/api/searchbuses',postSearchBuses)
 
 app.get('/api/searchbuses' ,getSearchBuses)
@@ -145,8 +94,11 @@ app.get('/api/searchbuses' ,getSearchBuses)
 app.post("/api/v1/blogs" , PostApiV1Blogs)
 app.get("/api/v1/blogs" , GetApiV1Blogs)
 
-app.post("/api/search" , postApiSearch)
-app.get("/api/search" , getSearchApi)
+
+
+app.post("/api/reviews" , postApiReview)
+app.get("/api/reviews" , getApiReview)
+
 
 const PORT = process.env.PORT || 5000;
 

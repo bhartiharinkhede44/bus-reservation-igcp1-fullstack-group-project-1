@@ -15,7 +15,7 @@ const bookSchema = new Schema({
         type: String,
         required: true
     },
-    productImg: {
+    Image: {
         type: String, 
     }
 
@@ -23,4 +23,4 @@ const bookSchema = new Schema({
 
 const Book = mongoose.model('Book', bookSchema)
 
-export default Book
+export default Book;

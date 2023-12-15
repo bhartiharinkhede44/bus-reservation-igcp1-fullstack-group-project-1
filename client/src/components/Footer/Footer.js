@@ -11,17 +11,19 @@ function Footer() {
             <div >
           
                
-                <div className="design-footer">
-                <h1 className=' text-center color'>Bus Reservation</h1><br />
+                <div className="design-footer">  <div> 
+                <h1 className=' color'>Bus Reservation🚌</h1>
               
-                   {/* <div> */}
-                   {/* <h3 className='fontsize'>Golden Lines</h3><br />
-                         <span class="description">◼ Debit What Comes In, Credit What Goes Out<br />
-                            ◼ Debit the Receiver, Credit the Giver.<br />
-                            ◼ Debit All Expenses and Losses, Credit all Incomes and Gains.<br />
-                        </span>  */}
+                 
+                  
+                         <span class="description">◼  help save your time and renewal bus passes<br/> without standing in a line for hour near counters<br />
+                            ◼ No longer answering phone calls..<br />
+                            ◼ More bookings, fewer cancellations<br />
+                            ◼ No more human errors.<br />
+                            ◼ MSecure and fast payments.<br />
+                        </span>  
 
-                    {/* </div>  */}
+                   </div> 
 
                     <div>
                         <h3 className='fontsize'>✔Quick Links</h3>

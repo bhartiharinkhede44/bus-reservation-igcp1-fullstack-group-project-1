@@ -9,13 +9,13 @@
     color: black;
     font-size: 20px;
   }
-  .design-footer {
-    
+  .design-footer { 
     background-color: black;
     padding: 30px 15px;
     color: white;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
   }
   .color{
     color: white;
